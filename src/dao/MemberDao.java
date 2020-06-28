@@ -287,7 +287,7 @@ public class MemberDao {
 		
 		ArrayList<Human> sortList = new ArrayList<Human>();
 		// 투수데이터만 저장된 리스트를 리턴받음.
-		sortList = postionCheck(1);
+		sortList = positionCheck(1);
 				
 		for (int i = 0; i < sortList.size()-1; i++) {			
 			for (int j = i + 1; j < sortList.size(); j++) {
@@ -315,7 +315,7 @@ public class MemberDao {
 		
 		ArrayList<Human> sortList = new ArrayList<Human>();
 		// 타자데이터만 저장된 리스트를 리턴받음.
-		sortList = postionCheck(2);
+		sortList = positionCheck(2);
 			
 		for (int i = 0; i < sortList.size()-1; i++) {
 			for (int j = i + 1; j < sortList.size(); j++) {
@@ -339,7 +339,7 @@ public class MemberDao {
 	}
 	
 	//  postionCheck : 매개변수가 1일 경우 투수, 매개변수가 2일 경우 타자, 그리고 그 포지션의 데이터만 리스트의 저장.
-	public ArrayList<Human> postionCheck(int position) {
+	public ArrayList<Human> positionCheck(int position) {
 		
 		//선택한 포지션의 데이터를 저장할 리스트.
 		ArrayList<Human> reList = new ArrayList<Human>();
