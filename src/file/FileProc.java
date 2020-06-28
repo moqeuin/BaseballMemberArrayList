@@ -24,7 +24,7 @@ public class FileProc {
 			if(file.createNewFile()) {
 				System.out.println("파일 생성 성공!");
 			}else {
-				System.out.println("파일 생성 실패");
+				System.out.println("동일한 이름의 파일이 이미 존재합니다.");
 			}
 		} catch (IOException e) {			
 			e.printStackTrace();
