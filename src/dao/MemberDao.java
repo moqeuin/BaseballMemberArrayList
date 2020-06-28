@@ -26,14 +26,16 @@ public class MemberDao {
 		// 인스턴스를 생성할 때 파일의 데이터를 가져옴.
 		this.Data_load();
 		
-		memberNumber = list.get(list.size()-1).getNumber();
-		if(memberNumber<2000) {
-			memberNumber+=1;
+		if(list.size() == 0) {
+			memberNumber = 1000;
 		}
-		else {
-			memberNumber-=1000;
-			memberNumber+=1;
-		}				
+		else{
+			memberNumber = list.get(list.size()-1).getNumber();
+			if(memberNumber>2000) {
+				memberNumber-=1000;
+			}
+		}
+		memberNumber+=1;			
 	}
 	
 	// insert : 데이터를 먼저 입력 후에 그 데이터를 통해서 인스턴스로 생성하고 리스트에 추가.
